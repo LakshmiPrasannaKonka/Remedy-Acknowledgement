@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Branch Admin Login</title>
-<link rel="stylesheet" type="text/css" href="/style1.css"/>
+<link rel="stylesheet" type="text/css" href="/style.css"/>
 <script type="text/javascript">
 function validate(){
 	var id=document.getElementById("userId").value;
@@ -26,13 +26,13 @@ function validate(){
 </head>
 
 <body>
+<div style="text-align:center">
 <div class="header">
-<h1>Remedy Acknowledgement</h1>
-</div>
-<h2>SupportAnalyst Login</h2>
+
+<h1>SupportAnalystLogin</h1>
 <div class="formdata">
 <div align="center">
-<form:form onsubmit="return validate()" action="supportanalystloginverify" method="post" modelAttribute="supportanalystlogin">
+<form:form onsubmit="return validate()" action="supportanalystverify" method="post" modelAttribute="supportanalystlogin">
 <table>
 <tr>
 <td>UserId:</td>
@@ -40,18 +40,21 @@ function validate(){
 </tr>
 <tr>
 <td>Password:</td>
-<td><form:input path="password" class="formcontrol" id="password"/></td>
+<td><form:input path="password" class="formcontrol" id="password" type="password"/></td>
 </tr>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>
 </form:form>
 <ul>
-<li><a href="#">Forgot Userid</a></li>
+<div align="center">
+<li><a href="#">Forgot Userid </a></li>
 <li><a href="#">Forgot Password</a></li>
 </ul>
+New User?<a href="supportanalyst">Registration</a><br><br>
 <a href="/">Home</a>
 <br>
 ${message}
+</div>
 </div>
 </div>
 </body>

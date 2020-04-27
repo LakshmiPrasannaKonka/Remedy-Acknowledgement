@@ -53,10 +53,23 @@ public class Usercontroller {
 			if(c1.getPassword().equals(userlogin.getPassword())) 
 			{
 				session.setAttribute("username",c1.getUserId());
-				return "userhome";
+				return "UserHome";
 			}
 		}	
 		model.addAttribute("message", "Invalid userid or password");
 		return "UserLogin";
 	 }
+	@GetMapping(value="/userlogout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/";
+	}
+
+	@GetMapping("/userLogout")
+	public String userLogOut(HttpSession session)
+	{
+		session.invalidate();
+		
+		return "redirect:/";
+	}
 	}

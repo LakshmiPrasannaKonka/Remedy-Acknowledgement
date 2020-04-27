@@ -12,10 +12,11 @@
 <div class="header">
 <h1>Remedy Acknowledgement</h1>
 <ul>
+
 <li><a href="admin">Admin</a></li>
 <li><a href="supportanalyst">Support Analyst</a></li>
 <li><a href="user">User</a></li>
-<li><a href="logout">Logout</a></li>
+
 </ul>
 </div>
 </div>

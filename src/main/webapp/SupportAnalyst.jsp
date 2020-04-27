@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Branch Admin</title>
-<link rel="stylesheet" type="text/css" href="/style1.css" />
+<link rel="stylesheet" type="text/css" href="/style.css" />
 <script type="text/javascript">
 	function validate() {
 		var fn = document.getElementById("firstName").value;
@@ -19,7 +19,7 @@
 		var ln = document.getElementById("lastName").value;
 		var gender = document.getElementById("gender").value;
 		var supportLevel = document.getElementById("supportLevel").value;
-		var id = document.getElementById("adminId").value;
+		var id = document.getElementById("analystId").value;
 		var answer = document.getElementById("answer").value;
 		if (fn == "") {
 			document.getElementById("firstName").style.borderColor = "red";
@@ -42,7 +42,7 @@
 			return false;
 		}
 		if (id == "") {
-			document.getElementById("adminId").style.borderColor = "red";
+			document.getElementById("analystId").style.borderColor = "red";
 			alert("Please update mandatory highlighted fields");
 			return false;
 		}
@@ -78,10 +78,11 @@
 </script>
 </head>
 <body>
-	<div class="header" />
-	<h1>Support Analyst</h1>
+	<div class="header">
+	 <div style="head-align:center">
 	</div>
-	<h2>Support Analyst Registration</h2>
+	<div align="center">
+	<h1>Support Analyst Registration</h1>
 	<div class="formdata">
 		<form:form onsubmit="return validate()" action="supportanalystreg"
 			modelAttribute="supportanalyst" method="post">
@@ -120,7 +121,7 @@
 				</tr>
 				<tr>
 					<td>SupportAnalystId:</td>
-					<td><form:input path="adminId" id="adminId" /></td>
+					<td><form:input path="analystId" id="analystId" /></td>
 				</tr>
 				<tr>
 					<td>Password</td>
@@ -140,9 +141,12 @@
 							id="answer" placeholder="Answer" width="170px" /></td>
 				</tr>
 			</table>
-			<input type="submit" value="submit" class="formsubmitbutton" />
+			<br><br>
+			<div align="center">
+			<input type="submit" value="submit" class="formsubmitbutton" /><br><br>
 		</form:form>
-		Already having account?<a href="supportanalystlogin">Login</a>
+		Already having account?<a href="supportanalystlogin">Login</a><br><br>
+		<a href="/">Home</a>
 		${message}
 </body>
 </div>

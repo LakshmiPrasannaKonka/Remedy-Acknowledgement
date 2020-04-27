@@ -2,6 +2,7 @@
 h1{
 	size:30px;
 	text-align: center;
+	text-color:slateblue;
 }
 ul{
 	text-align: right;
@@ -10,12 +11,12 @@ ul{
 li{
 	display:inline-table;
 	padding:10px;
-	text-shadow: 0 0 3px #0080ff;
+	text-shadow: 0 0 3px blue;
  	font-size:20px;
 	
 }
 li a:hover{
-	color:#ff8040;
+	color:chocolate;
 	font-size:25px;
 }
 body{
@@ -24,11 +25,14 @@ body{
 	background-image:url("medi.jpg");	
 }
 .header{
-	color:#0080ff;
+	color:crimson;
 	width:100%;
 	height:100px;
-	background-color:#ffffff;	
+
 	padding: 20px;	
 }
 
+body {
+ background-image: url("image.jpg");
 
+}

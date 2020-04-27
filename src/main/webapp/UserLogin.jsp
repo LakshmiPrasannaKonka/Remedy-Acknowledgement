@@ -25,28 +25,32 @@ function validate(){
 </head>
 <body>
 <div class="header">
-<h1>Support Analyst</h1>
+ <div style="text-align:center">
 </div>
-<h2>User Login</h2>
+<h1>User Login</h1>
 <div class="formdata">
+
 <div align="center">
 <form:form onsubmit="return validate()" action="userloginverify" method="post" modelAttribute="userlogin">
-<table>
+ <table align="center">
+
 <tr>
 <td>UserId:</td>
 <td><form:input path="userId" class="formcontrol" id="userId"/></td>
 </tr>
 <tr>
 <td>Password:</td>
-<td><form:input path="password" class="formcontrol" id="password"/></td>
+<td><form:input path="password" class="formcontrol" id="password" type="password"/></td>
 </tr>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>
 </form:form>
 <ul>
-<li class="l"><a href="#">Forgot Userid</a></li>
+<div align="center">
+<li class="l"><a href="#">ForgotUserid</a></li>
 <li class="l"><a href="#">Forgot Password</a></li>
 </ul>
+New User?<a href="user">Registration</a><br><br>
 <a href="/">Home</a>
 <br>
 ${message}

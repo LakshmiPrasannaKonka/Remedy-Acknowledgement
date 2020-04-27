@@ -9,5 +9,5 @@ import com.remedyack.remedyack.models.Admin;
 
 @Repository
 public interface Admindao extends CrudRepository<Admin, String> {
-	public Admin findByFirstName(String FirstName);
+	public Admin findByAdminId(String AdminId);
 }

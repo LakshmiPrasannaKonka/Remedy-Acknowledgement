@@ -80,13 +80,14 @@ function validate(){
 </head>
 <body>
 <div class="header">
-<h1>Support Analyst</h1>
+ <div style="head-align:center;">
 </div>
-<h2>User Registration</h2>
+<div align="center">
+<h1>User Registration</h1>
 <div class="formdata">
 <form:form  onsubmit="return validate()" action="userreg" modelAttribute="user" method="post">
-<!-- First Name, Last Name, Age, Gender, Contact Number, User Id, Password -->
-<table>
+<!-- First Name, Last Name,Designation,seatNo,PcNumber,IpAddress, Contact Number, User Id, Password -->
+<table align="center">
 <tr>
 <td>FirstName:</td>
 <td><form:input path="firstName" id="firstName" /></td>
@@ -141,11 +142,15 @@ function validate(){
 </td>
 </tr>
 </table>
-<input type="submit" value ="submit" class="formsubmitbutton"/>
+<br><br>
+<div align="center">
+<input type="submit" value ="submit" class="formsubmitbutton"/><br><br>
 </form:form>
-Already having account?<a href="userlogin">Login</a>
+Already having account?<a href="userlogin">Login</a><br><br>
+<a href="/">Home</a>
 <br>
 ${message}
+
 </div>
 </body>
 </html>

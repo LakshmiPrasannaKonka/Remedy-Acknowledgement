@@ -83,13 +83,13 @@ function validate(){
 </head>
 <body>
 <div class="header"/>
-<h1>Remedy Acknowledgement</h1>
+<div style="head-align:center;">
 </div>
-<h2>Admin Registration</h2>
+<h1>Admin Registration</h1>
 <div class="formdata">
 <form:form onsubmit="return validate()" action="adminreg" modelAttribute="admin" method="post">
 <!-- First Name, Last Name, Age, Gender, Contact Number, Admin Id, Password -->
-<table>
+<table align="center">
 <tr>
 <td>FirstName:</td>
 <td><form:input path="firstName" id="firstName" /></td>
@@ -138,10 +138,12 @@ function validate(){
 </td>
 </tr>
 </table>
-<input type="submit" value ="submit" class="formsubmitbutton"/>
+<div align="center">
+<input type="submit" value ="submit" class="formsubmitbutton"/><br><br>
 </form:form>
 Already having account?<a href="adminlogin">Login</a>
 <br>
+<a href="/">Home</a>
 ${message}
 </body>
 </div>

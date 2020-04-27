@@ -11,7 +11,7 @@ public class SupportAnalyst {
 	@Id
 	@Generated("assigned")
 	@Column
-	private String adminId;
+	private String analystId;
 	@Column
 	private String firstName;
 	@Column
@@ -32,11 +32,11 @@ public class SupportAnalyst {
 	private String answer;
 	@Column
 	private String status;
-	public String getAdminId() {
-		return adminId;
+	public String getAnalystId() {
+		return analystId;
 	}
-	public void setAdminId(String adminId) {
-		this.adminId = adminId;
+	public void setAnalystId(String analystId) {
+		this.analystId = analystId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -101,7 +101,7 @@ public class SupportAnalyst {
 	}
 	@Override
 	public String toString() {
-		return "SupportAnalyst [adminId=" + adminId + ", firstName=" + firstName + ", lastName=" + lastName + ", age="
+		return "SupportAnalyst [analystId=" + analystId + ", firstName=" + firstName + ", lastName=" + lastName + ", age="
 				+ age + ", gender=" + gender + ", contactNumber=" + contactNumber + ", supportLevel=" + supportLevel
 				+ ", password=" + password + ", secretQuestion=" + secretQuestion + ", answer=" + answer + ", status="
 				+ status + "]";
