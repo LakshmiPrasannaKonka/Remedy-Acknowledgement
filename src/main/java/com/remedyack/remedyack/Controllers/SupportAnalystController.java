@@ -1,5 +1,6 @@
 package com.remedyack.remedyack.Controllers;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
@@ -12,14 +13,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.remedyack.remedyack.dao.SupportAnalystdao;
+import com.remedyack.remedyack.dao.UserRemedydao;
 import com.remedyack.remedyack.models.SupportAnalyst;
 import com.remedyack.remedyack.models.SupportAnalystLogin;
+import com.remedyack.remedyack.models.UserRemedy;
 
 @Controller
 public class SupportAnalystController {
 	@Autowired
 	private SupportAnalystdao dao;
-
+	@Autowired
+	private UserRemedydao urdao;
 	@GetMapping(value = "/supportanalyst")
 	public String supportanalyst(Model model) {
 		model.addAttribute("supportanalyst", new SupportAnalyst());
@@ -75,5 +79,13 @@ public class SupportAnalystController {
 		
 		return "redirect:/";
 	}
+	@GetMapping(value="/assignedtoanalyst")
+	public String remedyinfo(Model model) {
+		List<UserRemedy> list=(List<UserRemedy>) urdao.findAll();
+
+		model.addAttribute("list",list);
+		return "RemedyInformation";
+	}
+	
 
 }

@@ -20,10 +20,11 @@ if(userid==null)
 <div style="head-align:center;">
 <h1>Welcome <span><%=session.getAttribute("name")%></span></h1>
 <ul class="a">
-<li><a href="#" class="a1">Remedy Information</a></li>
-<li><a href="req" class="a1">Request List</a></li>
+<li><a href="remedyinfo" class="a1">Remedy Information</a></li>
+<li><a href="req" class="a1">RequestList</a></li>
 <li><a href="#" class="a1">Help</a></li>
 <li><a href="adminLogout" class="a1">Logout</a></li><br><br>
+
 <a href="/">Home</a>
 </ul>
 </div>

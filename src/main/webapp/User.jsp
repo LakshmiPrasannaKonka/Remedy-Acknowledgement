@@ -120,7 +120,7 @@ function validate(){
 </tr>
 <tr>
 <td>UserId:</td>
-<td><form:input path="userId" id="userId" /></td>
+<td><form:input path="id" id="userId" /></td>
 </tr>
 <tr>
 <td>Password</td>

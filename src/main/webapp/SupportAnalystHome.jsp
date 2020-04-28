@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Support Analyst Home</title>
-<link rel="stylesheet" type="text/css" href="/style1.css"/>
+<link rel="stylesheet" type="text/css" href="/style.css"/>
 </head>
 <body>
 <%
@@ -18,7 +18,7 @@ if(userid==null)
 <div class="header">
 <h1 style="text-align: center">Welcome <span><%=userid%> </span></h1> 
 <ul class="a">
-<li><a href="/" class="a1">RequestRemedies</a></li>
+<li><a href="#" class="a1">RequestRemedies</a></li>
 
 <li ><a href="supportanalystlogout" class="a1">Logout</a></li><br><br>
 <a href="/">Home</a>

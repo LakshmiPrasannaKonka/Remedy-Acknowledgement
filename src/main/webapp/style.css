@@ -36,3 +36,6 @@ body {
  background-image: url("image.jpg");
 
 }
+a:link {
+  color: red;
+}

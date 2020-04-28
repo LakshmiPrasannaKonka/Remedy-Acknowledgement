@@ -17,8 +17,8 @@ if(userid==null)
 <div class="header">
 <h1 style="text-align: center">Welcome <span><%=userid%> </span></h1> 
 <ul class="a">
-<li><a href="#" class="a1">Remedy Creation</a></li>
-<li ><a href="#" class="a1">ViewRemedy</a></li>
+<li><a href="/userremedy" class="a1">Remedy Creation</a></li>
+<li ><a href="usersearchremedy" class="a1">SearchRemedy</a></li>
 <li ><a href="userLogout" class="a1">Logout</a></li><br><br>
 <a href="/">Home</a>
 </ul>

@@ -10,7 +10,7 @@ public class User {
 	@Id
 	@Generated("assigned")
 	@Column
-	private String userId;
+	private String id;
 	@Column
 	private String password;
 	@Column
@@ -64,16 +64,19 @@ public class User {
 		IpAddress = ipAddress;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	
+	
+
+	public String getId() {
+		return id;
 	}
 
-	public String getUserId() {
-		return userId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public void setCUserId(String userId) {
-		this.userId = userId;
+	public void setPcNumber(String pcNumber) {
+		PcNumber = pcNumber;
 	}
 
 	public String getPassword() {
@@ -126,7 +129,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", password=" + password + ", firstName=" + firstName + ", lastName="
+		return "User [userId=" + id + ", password=" + password + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", designation=" + designation + ", seatNo=" + seatNo + ", PcNumber=" + PcNumber + ", IpAddress="
 				+ IpAddress + ", contactNumber=" + contactNumber + ", secretQuestion=" + secretQuestion + ", answer="
 				+ answer + "]";

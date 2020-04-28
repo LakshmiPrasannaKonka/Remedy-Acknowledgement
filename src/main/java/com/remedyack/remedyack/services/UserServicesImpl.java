@@ -15,7 +15,7 @@ public class UserServicesImpl implements UserServices {
     private Userdao dao;
     	@Override
 	public int createUser(User user) {
-		User u=dao.findByUserId(user.getUserId());
+		User u=dao.findById(user.getId()).get();
 		if(u==null) {
 			User u1=dao.save(user);
 			if (u1 != null) {
@@ -28,7 +28,7 @@ public class UserServicesImpl implements UserServices {
 	}
 	@Override
 	public int login(UserLogin userlogin) {
-		User c=dao.findByUserId(userlogin.getUserId());
+		User c=dao.findById(userlogin.getUserId()).get();
 		 if(c==null)
 		 {
 		   return 1;

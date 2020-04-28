@@ -47,17 +47,26 @@ public class Usercontroller {
 	public String userloginverify(@ModelAttribute("userlogin") UserLogin userlogin,Model model,HttpSession session) 
 	{
 		Optional<User> cl=dao.findById(userlogin.getUserId());
-		if(cl!=null) 
+		if(cl.isPresent()) 
 		{
 			User c1=cl.get();
 			if(c1.getPassword().equals(userlogin.getPassword())) 
 			{
-				session.setAttribute("username",c1.getUserId());
+				session.setAttribute("username",c1.getId());
 				return "UserHome";
 			}
+			else
+			{
+				model.addAttribute("message", "Invalid userid or password");
+				return "UserLogin";
+			}
+			
 		}	
-		model.addAttribute("message", "Invalid userid or password");
-		return "UserLogin";
+		else
+		{
+			model.addAttribute("message", "Not Registered");
+			return "UserLogin";
+		}
 	 }
 	@GetMapping(value="/userlogout")
 	public String logout(HttpSession session) {
