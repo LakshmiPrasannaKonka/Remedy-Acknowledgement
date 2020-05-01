@@ -26,15 +26,15 @@ public class Usercontroller {
 	}
 	@PostMapping(value="/userreg")
 	public String userreg(@ModelAttribute("user") User userreg,Model model) {
-		User c= dao.save(userreg);
-		if(c!=null) 
+		User u= dao.save(userreg);
+		if(u!=null) 
 		{
 		model.addAttribute("message","Your details are submitted successfully.");
 		return "User";
 		}
 		else 
 		{
-			model.addAttribute("message","Oops...Something went wrong.");
+			model.addAttribute("message","Something went wrong.");
 			return "failure";
 		}
 	}
@@ -46,13 +46,13 @@ public class Usercontroller {
 	@PostMapping(value="/userloginverify")
 	public String userloginverify(@ModelAttribute("userlogin") UserLogin userlogin,Model model,HttpSession session) 
 	{
-		Optional<User> cl=dao.findById(userlogin.getUserId());
-		if(cl.isPresent()) 
+		Optional<User> ul=dao.findById(userlogin.getUserId());
+		if(ul.isPresent()) 
 		{
-			User c1=cl.get();
-			if(c1.getPassword().equals(userlogin.getPassword())) 
+			User u1=ul.get();
+			if(u1.getPassword().equals(userlogin.getPassword())) 
 			{
-				session.setAttribute("username",c1.getId());
+				session.setAttribute("username",u1.getId());
 				return "UserHome";
 			}
 			else

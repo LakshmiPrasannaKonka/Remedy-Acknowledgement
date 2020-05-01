@@ -6,7 +6,7 @@ h1{
 }
 
 ul{
-	text-align: right;
+	text-align: left;
 	margin-right: 75px;	
 }
 li{
@@ -19,9 +19,10 @@ li{
 li a:hover{
 	color:chocolate;
 	font-size:25px;
+	
 }
 body{
-	color:;
+	color:black;
 	font-family:serif;
 	background-image:url("medi.jpg");	
 }
@@ -34,12 +35,14 @@ body{
 }
 
 body {
- background-image: url("image6.jpg");
+
+ background-image: url("image1.jpg");
 background-repeat: no-repeat;
   background-attachment: fixed;
  background-size: 100% 100%;
-
 }
 a:link {
   color: red;
+  
+  
 }

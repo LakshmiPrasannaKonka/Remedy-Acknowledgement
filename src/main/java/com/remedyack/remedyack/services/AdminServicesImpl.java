@@ -1,5 +1,6 @@
 package com.remedyack.remedyack.services;
 
+import java.security.Security;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -52,44 +53,5 @@ public class AdminServicesImpl implements AdminServices {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-			
-/*@Autowired
-
-  private JdbcTemplate jdbcTemplate;
-
-  public int addSupportAnalyst(SupportAnalyst supportanalyst){
-
-    String sql = "INSERT INTO supportanalyst(analystId,firstname, lastname, age, gender,contactNumber,supportLevel) VALUES(?,?,?,?,?,?,?)";
-
-    return jdbcTemplate.update(sql,supportanalyst.getAnalystId(),supportanalyst.getFirstName(),
-
-        supportanalyst.getLastName(), supportanalyst.getAge(), supportanalyst.getGender(),supportanalyst.getContactNumber(),supportanalyst.getSupportLevel());
-
-  }*/
-  /*public List<SupportAnalyst> getAllSupportAnalyst(JdbcTemplate jdbcTemplate){
-    return jdbcTemplate.query("select * from supportanalyst", new RowMapper<SupportAnalyst>(){
-
-      public SupportAnalyst mapRow(ResultSet rs, int arg1) throws SQLException {
-
-        SupportAnalyst s = new SupportAnalyst();
-        s.setAnalystId(rs.getString("analystId"));
-        s.setFirstName(rs.getString("firstname"));
-        s.setLastName(rs.getString("lastname"));
-        s.setAge(rs.getString("age"));
-        s.setGender(rs.getString("gender"));
-        s.setGender(rs.getString("contactNumber"));
-        s.setGender(rs.getString("supportLevel"));
-     
-
-        return s;
-
-      }
-
- 
-
-    });
-
-  }*/
 
 }

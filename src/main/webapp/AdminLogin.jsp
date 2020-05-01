@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <title>Admin Login</title>
 <link rel="stylesheet" type="text/css" href="/style.css"/>
@@ -12,12 +13,12 @@ function validate(){
 	var id=document.getElementById("userid").value;
 	var pwd=document.getElementById("password").value;
 	if(id==""){
-		document.getElementById("userid").style.borderColor = "red";
 		alert("please update mandatory highlighted fields");
+		document.getElementById("userid").style.borderColor = "red";		
 		return false;
 		}else if(pwd==""){
-			document.getElementById("password").style.borderColor = "red";
 			alert("please update mandatory highlighted fields");
+			document.getElementById("password").style.borderColor = "red";
 				return false;
 			}
 }
@@ -25,15 +26,18 @@ function validate(){
 </script>
 </head>
 <body>
+
+<div align="center">
 <div class="header">
  <div style="text-align:center">
 
 </div>
-<h1>Admin Login</h1>
+<h2>Admin Login</h2>
 <div class="formdata">
 <div align="center">
 <form:form onsubmit="return validate()" action="loginverify" method="post" modelAttribute="adminlogin">
 <table>
+
 <tr>
 <td>UserId:</td>
 <td><form:input path="userId" class="formcontrol" id="userid"/></td>

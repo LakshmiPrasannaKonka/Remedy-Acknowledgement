@@ -10,18 +10,43 @@ ul{
 	margin-right: 75px;	
 }
 li{
-	display:inline-table;
+	display:inline;
 	padding:10px;
 	text-shadow: 0 0 3px blue;
  	font-size:20px;
 	
 }
-li a:hover{
-	color:chocolate;
-	font-size:25px;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 15px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
 body{
-	color:;
+	color:black;
 	font-family:serif;
 	background-image:url("medi.jpg");	
 }
@@ -34,11 +59,11 @@ body{
 }
 
 body {
+
  background-image: url("image6.jpg");
 background-repeat: no-repeat;
   background-attachment: fixed;
  background-size: 100% 100%;
-
 }
 a:link {
   color: red;

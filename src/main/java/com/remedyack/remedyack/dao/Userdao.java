@@ -9,7 +9,6 @@ import com.remedyack.remedyack.models.User;
 @Repository
 public interface Userdao extends CrudRepository<User, String> {
 	
-
 }
 
 

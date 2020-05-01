@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <title>Admin home</title>
-<link rel="stylesheet" type="text/css" href="/style.css">
+<link rel="stylesheet" type="text/css" href="/style1.css">
 </head>
 <body>
 <%
@@ -23,9 +24,9 @@ if(userid==null)
 <li><a href="remedyinfo" class="a1">Remedy Information</a></li>
 <li><a href="req" class="a1">RequestList</a></li>
 <li><a href="#" class="a1">Help</a></li>
-<li><a href="adminLogout" class="a1">Logout</a></li><br><br>
+<li><a href="adminLogout" class="a1">Logout</a></li>
 
-<a href="/">Home</a>
+<li><a href="/">Home</a></li>
 </ul>
 </div>
 </body>

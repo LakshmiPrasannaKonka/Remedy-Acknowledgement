@@ -31,8 +31,8 @@ function validate(){
 		return false;
 		}
 	 if(age==""){
-		document.getElementById("Age").style.borderColor="red";
-		alert("Please update Mandatory fields");
+		 alert("Please update Mandatory fields");
+		document.getElementById("Age").style.borderColor="red";		
 		return false;
 		}
 	 if(gender==""){

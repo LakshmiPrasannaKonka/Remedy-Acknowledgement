@@ -27,12 +27,7 @@ public class UserRemedy {
 	@Column
 	private String statement;
 	@ManyToOne
-
-	private User user;
-	
-	
-	
-	
+	private User user;	
 	public long getRemedyId() {
 		return remedyId;
 	}

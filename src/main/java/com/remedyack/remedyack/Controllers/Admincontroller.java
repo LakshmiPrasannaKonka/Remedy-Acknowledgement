@@ -113,6 +113,7 @@ public class Admincontroller {
 			model.addAttribute("message","Unable to update");
 		}
 		return "adminhome";
+		
 	}	
 	@GetMapping(value="/adminlogout")
 	public String logout(HttpSession session) {

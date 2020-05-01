@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>User Home</title>
-<link rel="stylesheet" type="text/css" href="/style.css"/>
+<link rel="stylesheet" type="text/css" href="/style1.css"/>
 </head>
 <body>
 <%
@@ -19,8 +19,8 @@ if(userid==null)
 <ul class="a">
 <li><a href="/userremedy" class="a1">Remedy Creation</a></li>
 <li ><a href="usersearchremedy" class="a1">SearchRemedy</a></li>
-<li ><a href="userLogout" class="a1">Logout</a></li><br><br>
-<a href="/">Home</a>
+<li ><a href="userLogout" class="a1">Logout</a></li>
+<li><a href="/">Home</a></li>
 </ul>
 
 </div>
