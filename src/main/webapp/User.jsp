@@ -21,7 +21,13 @@ function validate(){
 	var IpAddress=document.getElementById("IpAddress").value;
 	var PcNumber=document.getElementById("PcNumber").value;
 	var id=document.getElementById("userId").value;
-	var ans=document.getElementById("answer").value;
+	var qstn1=document.getElementById("secretquestion1").value;
+	var ans1=document.getElementById("answer1").value;
+	var qstn2=document.getElementById("secretquestion2").value;
+	var ans2=document.getElementById("answer2").value;
+	var qstn3=document.getElementById("secretquestion3").value;
+	var ans3=document.getElementById("answer3").value;
+		
 	 if(fn==""){
 		document.getElementById("firstName").style.borderColor = "red";
 		alert("Please update mandatory highlighted fields");
@@ -127,20 +133,53 @@ function validate(){
 <td><form:input path="password" id="password" type="password"/>
 </tr>
 <tr>
-<td>Secret Question:</td>
+				
+<td>Secret Question1:</td>
 <td>
-<form:select path="secretQuestion" id="secretQuestion" class="select-box" >
-<option  selected="selected" value="In which month you born?">In which month you born?</option>
+<form:select path="secretquestion1" id="secretQuestion1" class="select-box" >
+<option  selected="selected" value="In which month you born ?">In which month you born?</option>
   <option value="What is your favorite movie?">What is your favorite movie?</option>
   <option value="What is your pet name?">What is your pet name?</option>
 </form:select>
 </td>
 </tr>
+
 <tr>
 <td colspan="2" align="right">
-<form:input path="answer" id="answer" placeholder="Answer" width="170px" />
+<form:input path="answer1" id="answer1" placeholder="Answer" width="170px" />
 </td>
 </tr>
+
+<tr>
+<td>Secret Question 2:</td>
+<td>
+<form:select path="secretquestion2" id="secretquestion2" class="select-box" >
+<option  selected="selected" value="What is your favourite place?">What is your favourite place?</option>
+  <option value="What is your parent's anniversary?">What is your parent's anniversary?</option>
+  <option value="What is your highest education?">What is your highest education?</option>
+</form:select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<form:input path="answer2" id="answer2" placeholder="Answer" width="170px" />
+</td>
+</tr>
+<tr>
+<td>Secret Question 3:</td>
+<td>
+<form:select path="secretquestion3" id="secretquestion3" class="select-box" >
+<option  selected="selected" value="What is your favourite comic?">What is your favourite comic?</option>
+  <option value="What is your hometown?">What is your hometown?</option>
+  <option value="In what town or city did you meet your spouse/partner?">In what town or city did you meet your spouse/partner?</option>
+</form:select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<form:input path="answer3" id="answer3" placeholder="Answer" width="170px" />
+</td>
+</tr>					
 </table>
 <br><br>
 <div align="center">

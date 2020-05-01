@@ -1,6 +1,5 @@
 package com.remedyack.remedyack.models;
 
-import javax.persistence.Entity;
 import javax.annotation.Generated;
 import javax.persistence.*;
 
@@ -28,9 +27,53 @@ public class User {
 	@Column
 	private String contactNumber;
 	@Column
-	private String secretQuestion;
+	private String secretquestion1;
 	@Column
-	private String answer;
+	private String answer1;
+	@Column
+	private String secretquestion2;
+	@Column
+	private String answer2;
+	@Column
+	private String secretquestion3;
+	@Column
+	private String answer3;
+		public String getSecretquestion1() {
+		return secretquestion1;
+	}
+	public void setSecretquestion1(String secretquestion1) {
+		this.secretquestion1 = secretquestion1;
+	}
+	public String getAnswer1() {
+		return answer1;
+	}
+	public void setAnswer1(String answer1) {
+		this.answer1 = answer1;
+	}
+	public String getSecretquestion2() {
+		return secretquestion2;
+	}
+	public void setSecretquestion2(String secretquestion2) {
+		this.secretquestion2 = secretquestion2;
+	}
+	public String getAnswer2() {
+		return answer2;
+	}
+	public void setAnswer2(String answer2) {
+		this.answer2 = answer2;
+	}
+	public String getSecretquestion3() {
+		return secretquestion3;
+	}
+	public void setSecretquestion3(String secretquestion3) {
+		this.secretquestion3 = secretquestion3;
+	}
+	public String getAnswer3() {
+		return answer3;
+	}
+	public void setAnswer3(String answer3) {
+		this.answer3 = answer3;
+	}
 
 	public String getDesignation() {
 		return designation;
@@ -111,28 +154,15 @@ public class User {
 		this.contactNumber = contactNumber;
 	}
 
-	public String getSecretQuestion() {
-		return secretQuestion;
-	}
-
-	public void setSecretQuestion(String secretQuestion) {
-		this.secretQuestion = secretQuestion;
-	}
-
-	public String getAnswer() {
-		return answer;
-	}
-
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "User [userId=" + id + ", password=" + password + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", designation=" + designation + ", seatNo=" + seatNo + ", PcNumber=" + PcNumber + ", IpAddress="
-				+ IpAddress + ", contactNumber=" + contactNumber + ", secretQuestion=" + secretQuestion + ", answer="
-				+ answer + "]";
+		return "User [id=" + id + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", designation=" + designation + ", seatNo=" + seatNo + ", PcNumber=" + PcNumber + ", IpAddress="
+				+ IpAddress + ", contactNumber=" + contactNumber + ", secretquestion1=" + secretquestion1 + ", answer1="
+				+ answer1 + ", secretquestion2=" + secretquestion2 + ", answer2=" + answer2 + ", secretquestion3="
+				+ secretquestion3 + ", answer3=" + answer3 + "]";
 	}
 
 	

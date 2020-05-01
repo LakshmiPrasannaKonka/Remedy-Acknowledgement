@@ -10,11 +10,11 @@
 <link rel="stylesheet" type="text/css" href="/style.css"/>
 <script type="text/javascript">
 function validate(){
-	var id=document.getElementById("userid").value;
+	var id=document.getElementById("userId").value;
 	var pwd=document.getElementById("password").value;
 	if(id==""){
 		alert("please update mandatory highlighted fields");
-		document.getElementById("userid").style.borderColor = "red";		
+		document.getElementById("userId").style.borderColor = "red";		
 		return false;
 		}else if(pwd==""){
 			alert("please update mandatory highlighted fields");
@@ -40,7 +40,7 @@ function validate(){
 
 <tr>
 <td>UserId:</td>
-<td><form:input path="userId" class="formcontrol" id="userid"/></td>
+<td><form:input path="userId" class="formcontrol" id="userId"/></td>
 </tr>
 <tr>
 <td>Password:</td>
@@ -51,8 +51,11 @@ function validate(){
 </form:form>
 <ul>
 <div align="center">
-<li class="l"><a href="#">Forgot Userid</a></li>
-<li class="l"><a href="#">Forgot Password</a></li>
+<li class="l"><a href="forgotuid">Forgot UserId</a></li>
+<li class="l"><a href="forgotpswd">Forgot Password</a></li>
+
+
+
 </ul>
 New Admin?<a href="/">Registration</a>
 <br><br>

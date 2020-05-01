@@ -14,14 +14,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.remedyack.remedyack.dao.SupportAnalystdao;
 import com.remedyack.remedyack.dao.UserRemedydao;
+import com.remedyack.remedyack.models.Admin;
+import com.remedyack.remedyack.models.ForgotUid;
 import com.remedyack.remedyack.models.SupportAnalyst;
 import com.remedyack.remedyack.models.SupportAnalystLogin;
 import com.remedyack.remedyack.models.UserRemedy;
+import com.remedyack.remedyack.services.AdminServices;
+import com.remedyack.remedyack.services.SupportAnalystServices;
 
 @Controller
 public class SupportAnalystController {
 	@Autowired
 	private SupportAnalystdao dao;
+    @Autowired
+	private SupportAnalystServices supportanalystservice;	    
 	@Autowired
 	private UserRemedydao urdao;
 	@GetMapping(value = "/supportanalyst")
@@ -71,7 +77,54 @@ public class SupportAnalystController {
 		session.invalidate();
 		return "redirect:/";
 	}
-
+	@GetMapping("/Aforgotuid")
+	public String fid(Model model){
+		model.addAttribute("name",new ForgotUid());
+		return "forgotid1";
+	}
+	@PostMapping("/Aforgotuid2")
+	public String fid1(@ModelAttribute("name") ForgotUid fid,Model model)
+	{
+		String b=supportanalystservice.f1id(fid);
+		if(b!=null)
+		{
+	  	model.addAttribute("message",b+" is your id");
+		}
+		else
+		{
+			model.addAttribute("message", "Incorrect credentials");
+		}
+		return "forgotid1";
+	}
+	@GetMapping("/Aforgotpswd")
+	public String fpwd(Model model){
+		model.addAttribute("name1",new ForgotUid());
+		return "forgotpwd1";
+	}
+	@PostMapping("/Aforgotpwd1")
+	public String fpwd1(@ModelAttribute("name1") ForgotUid fid,Model model)
+	{
+		boolean b=supportanalystservice.f1pwd(fid);
+		if(b==true)
+		{
+	  	  return "resetPwd1";
+		}
+		else
+		{
+			model.addAttribute("message", "Incorrect credentials");
+			return "resetPwd1";
+		}
+	}
+	@PostMapping("/Aupdatepwd")
+	public String updatePassword(@ModelAttribute("name1") ForgotUid forgetUID,Model model)
+	{
+SupportAnalyst sa =dao.findByanalystId(forgetUID.getUid());
+System.out.println(sa);
+		sa.setPassword(forgetUID.getPwd());
+		dao.save(sa);
+		model.addAttribute("message","your password has been updated");
+		return "resetPwd1";
+	}
 	@GetMapping("/supportanalystLogout")
 	public String supportanalystLogOut(HttpSession session)
 	{
@@ -79,6 +132,7 @@ public class SupportAnalystController {
 		
 		return "redirect:/";
 	}
+	
 	@GetMapping(value="/assignedtoanalyst")
 	public String remedyinfo(Model model) {
 		List<UserRemedy> list=(List<UserRemedy>) urdao.findAll();

@@ -16,7 +16,13 @@ function validate(){
 	var phone=document.getElementById("contactNumber").value;
 	var id=document.getElementById("adminId").value;
 	var pwd=document.getElementById("password").value;
-	var ans=document.getElementById("answer").value;	
+	var qstn1=document.getElementById("secretquestion1").value;
+	var ans1=document.getElementById("answer1").value;
+	var qstn2=document.getElementById("secretquestion2").value;
+	var ans2=document.getElementById("answer2").value;
+	var qstn3=document.getElementById("secretquestion3").value;
+	var ans3=document.getElementById("answer3").value;
+		
 	var pattern=/[A-Za-z]{6,32}/;
 	var pattern1=/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
 	var pattern2=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
@@ -56,12 +62,42 @@ function validate(){
 		document.getElementById("password").style.borderColor="red";		
 		return false;
 		}
-	 if(ans==""){
-		alert("Please update Mandatory fields");
-		document.getElementById("answer").style.borderColor="red";
-		return false;
-		}
-	 if(!pattern.test(id)){
+	 if(qstn1==""){
+			alert("Please update Mandatory fields");
+			document.getElementById("secretquestion1").style.borderColor="red";		
+			return false;
+			}
+
+	 if(ans1==""){
+			alert("Please update Mandatory fields");
+			document.getElementById("answer1").style.borderColor="red";		
+			return false;
+			}
+		
+	 if(qstn2==""){
+			alert("Please update Mandatory fields");
+			document.getElementById("secretquestion2").style.borderColor="red";		
+			return false;
+			}
+
+	 if(ans2==""){
+			alert("Please update Mandatory fields");
+			document.getElementById("answer2").style.borderColor="red";		
+			return false;
+			}
+	 if(qstn3==""){
+			alert("Please update Mandatory fields");
+			document.getElementById("secretquestion3").style.borderColor="red";		
+			return false;
+			}
+
+	 if(ans3==""){
+			alert("Please update Mandatory fields");
+			document.getElementById("answer3").style.borderColor="red";		
+			return false;
+			}
+		
+	 	 if(!pattern.test(id)){
 		alert("Please update Mandatory fields");
 		document.getElementById("adminId").style.borderColor="red";
 		return false;		
@@ -106,7 +142,7 @@ function validate(){
 <td>Gender:</td>
 <td><form:radiobutton path="gender" value="female" id="gender" />Female
 <form:radiobutton path="gender" value="male" id="gender" />Male
-<form:radiobutton path="gender" value="others" id="gender" />Others
+
 </td>
 </tr>
 <tr>
@@ -123,18 +159,50 @@ function validate(){
 <td><form:input path="password" id="password" type="password"/>
 </tr>
 <tr>
-<td>Secret Question:</td>
+<td>Secret Question1:</td>
 <td>
-<form:select path="secretQuestion" id="secretQuestion" class="select-box" >
+<form:select path="secretquestion1" id="secretQuestion1" class="select-box" >
 <option  selected="selected" value="In which month you born ?">In which month you born?</option>
   <option value="What is your favorite movie?">What is your favorite movie?</option>
   <option value="What is your pet name?">What is your pet name?</option>
 </form:select>
 </td>
 </tr>
+
 <tr>
 <td colspan="2" align="right">
-<form:input path="answer" id="answer" placeholder="Answer" width="170px" />
+<form:input path="answer1" id="answer1" placeholder="Answer" width="170px" />
+</td>
+</tr>
+
+<tr>
+<td>Secret Question 2:</td>
+<td>
+<form:select path="secretquestion2" id="secretquestion2" class="select-box" >
+<option  selected="selected" value="What is your favourite place?">What is your favourite place?</option>
+  <option value="What is your parent's anniversary?">What is your parent's anniversary?</option>
+  <option value="What is your highest education?">What is your highest education?</option>
+</form:select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<form:input path="answer2" id="answer2" placeholder="Answer" width="170px" />
+</td>
+</tr>
+<tr>
+<td>Secret Question 3:</td>
+<td>
+<form:select path="secretquestion3" id="secretquestion3" class="select-box" >
+<option  selected="selected" value="What is your favourite comic?">What is your favourite comic?</option>
+  <option value="What is your hometown?">What is your hometown?</option>
+  <option value="In what town or city did you meet your spouse/partner?">In what town or city did you meet your spouse/partner?</option>
+</form:select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<form:input path="answer3" id="answer3" placeholder="Answer" width="170px" />
 </td>
 </tr>
 </table>

@@ -47,8 +47,8 @@ function validate(){
 </form:form>
 <ul>
 <div align="center">
-<li class="l"><a href="/">ForgotUserid</a></li>
-<li class="l"><a href="/">Forgot Password</a></li>
+<li class="l"><a href="Uforgotuid">ForgotUserid</a></li>
+<li class="l"><a href="Uforgotpswd">Forgot Password</a></li>
 </ul>
 New User?<a href="user">Registration</a><br><br>
 <a href="/">Home</a>
