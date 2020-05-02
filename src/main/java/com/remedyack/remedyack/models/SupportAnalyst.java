@@ -27,11 +27,64 @@ public class SupportAnalyst {
 	@Column
 	private String password;
 	@Column
-	private String secretQuestion;
-	@Column
-	private String answer;
-	@Column
 	private String status;
+	@Column
+	private String secretquestion1;
+	@Column
+	private String answer1;
+	@Column
+	private String secretquestion2;
+	@Column
+	private String answer2;
+	@Column
+	private String secretquestion3;
+	@Column
+	private String answer3;
+	@Column
+	private String email;
+	
+		public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+		public String getSecretquestion1() {
+		return secretquestion1;
+	}
+	public void setSecretquestion1(String secretquestion1) {
+		this.secretquestion1 = secretquestion1;
+	}
+	public String getAnswer1() {
+		return answer1;
+	}
+	public void setAnswer1(String answer1) {
+		this.answer1 = answer1;
+	}
+	public String getSecretquestion2() {
+		return secretquestion2;
+	}
+	public void setSecretquestion2(String secretquestion2) {
+		this.secretquestion2 = secretquestion2;
+	}
+	public String getAnswer2() {
+		return answer2;
+	}
+	public void setAnswer2(String answer2) {
+		this.answer2 = answer2;
+	}
+	public String getSecretquestion3() {
+		return secretquestion3;
+	}
+	public void setSecretquestion3(String secretquestion3) {
+		this.secretquestion3 = secretquestion3;
+	}
+	public String getAnswer3() {
+		return answer3;
+	}
+	public void setAnswer3(String answer3) {
+		this.answer3 = answer3;
+	}
 	public String getAnalystId() {
 		return analystId;
 	}
@@ -80,18 +133,7 @@ public class SupportAnalyst {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getSecretQuestion() {
-		return secretQuestion;
-	}
-	public void setSecretQuestion(String secretQuestion) {
-		this.secretQuestion = secretQuestion;
-	}
-	public String getAnswer() {
-		return answer;
-	}
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
+	
 	
 	public String getStatus() {
 		return status;
@@ -101,10 +143,11 @@ public class SupportAnalyst {
 	}
 	@Override
 	public String toString() {
-		return "SupportAnalyst [analystId=" + analystId + ", firstName=" + firstName + ", lastName=" + lastName + ", age="
-				+ age + ", gender=" + gender + ", contactNumber=" + contactNumber + ", supportLevel=" + supportLevel
-				+ ", password=" + password + ", secretQuestion=" + secretQuestion + ", answer=" + answer + ", status="
-				+ status + "]";
+		return "SupportAnalyst [analystId=" + analystId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", age=" + age + ", gender=" + gender + ", contactNumber=" + contactNumber + ", supportLevel="
+				+ supportLevel + ", password=" + password + ", status=" + status + ", secretquestion1="
+				+ secretquestion1 + ", answer1=" + answer1 + ", secretquestion2=" + secretquestion2 + ", answer2="
+				+ answer2 + ", secretquestion3=" + secretquestion3 + ", answer3=" + answer3 + ", email=" + email + "]";
 	}
 	
 			

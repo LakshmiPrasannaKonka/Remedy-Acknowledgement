@@ -16,8 +16,10 @@ import com.remedyack.remedyack.dao.SupportAnalystdao;
 import com.remedyack.remedyack.dao.UserRemedydao;
 import com.remedyack.remedyack.models.Admin;
 import com.remedyack.remedyack.models.AdminLogin;
+import com.remedyack.remedyack.models.ForgotUid;
 import com.remedyack.remedyack.models.SupportAnalyst;
 import com.remedyack.remedyack.models.UserRemedy;
+import com.remedyack.remedyack.services.AdminServices;
 @Controller
 public class Admincontroller {
 	@Autowired
@@ -26,7 +28,8 @@ public class Admincontroller {
 	private SupportAnalystdao sdao;
     @Autowired
     private UserRemedydao urdao;
-    
+    @Autowired
+    private AdminServices adminservice;
 	@GetMapping(value="/admin")
 	 public String admin(Model model) {
 		 model.addAttribute("admin",new Admin());
@@ -53,7 +56,7 @@ public class Admincontroller {
 	public String loginverify(@ModelAttribute("adminlogin") AdminLogin adminlogin,Model model,HttpSession session)
 	{
 		Optional<Admin> al=dao.findById(adminlogin.getUserId());
-		if(al!=null)
+		if(al.isPresent())
 		{
 			Admin a1=al.get();
 			if(a1.getPassword().equals(adminlogin.getPassword()))
@@ -62,15 +65,29 @@ public class Admincontroller {
 				return "AdminHome";
 			}		
 		}
+		
 		model.addAttribute("message", "Invalid userId or password");
-		return "AdminLogin";		
+		return "AdminLogin";
+		
 	}	
 	@GetMapping(value="/req")
 	public String req(Model model) {
 		List<SupportAnalyst> list=(List<SupportAnalyst>) sdao.findAll();
-	
+	    List<String> headerList = new ArrayList<String>();
+	    headerList.add("AdminId");
+	    headerList.add("First Name");
+	    headerList.add("Last Name");
+	    headerList.add("Age");
+	    headerList.add("Gender");
+	    headerList.add("Contact Number");
+	    headerList.add("Support Level");
+	    headerList.add("Status");
+	    headerList.add("Action");
+	    model.addAttribute("title","Support Analyst Activation Request");
+	    model.addAttribute("headersList",headerList);
 		model.addAttribute("list",list);
-		return "RequestList";
+		model.addAttribute("sa",1);
+		return "AdminHome";
 	}
 	@GetMapping(value="/remedyinfo")
 	public String remedyinfo(Model model) {
@@ -83,16 +100,31 @@ public class Admincontroller {
 			saList.add(t);
 			
 		});
+		
+		
+		 List<String> headerList = new ArrayList<String>();
+		    headerList.add("Remedy No");
+		    headerList.add("User Id	");
+		    headerList.add("PC Number");
+		    headerList.add("Contact Number");
+		    headerList.add("Category");
+		    headerList.add("Statement");
+		    headerList.add("Assign To SA");
+		    model.addAttribute("sa",2);
+		    model.addAttribute("title","Remedy Info");
+		    model.addAttribute("headersList",headerList);
+		
+		
        model.addAttribute("salist",saList);
 		model.addAttribute("list",list);
-		return "RemedyInformation";
+		return "AdminHome";
 	}
 	
 	
 		
 	@GetMapping(value="/accept")
 	public String acceptreq(@RequestParam("name") String name,Model model) {
-		SupportAnalyst sadmin=sdao.findByAnalystId(name);
+		SupportAnalyst sadmin=sdao.findByanalystId(name);
 		System.out.println(sadmin);
 		String status=sadmin.getStatus();
 		sadmin.setStatus("Yes");
@@ -105,7 +137,7 @@ public class Admincontroller {
 	
 	@GetMapping(value="/reject")
 	public String rejectreq(@RequestParam("name") String name,Model model) {
-		SupportAnalyst badmin=sdao.findByAnalystId(name);
+		SupportAnalyst badmin=sdao.findByanalystId(name);
 		String status=badmin.getStatus();
 		badmin.setStatus("Yes");
 		sdao.save(badmin);
@@ -115,6 +147,53 @@ public class Admincontroller {
 		return "adminhome";
 		
 	}	
+	@GetMapping("/forgotuid")
+	public String fid(Model model){
+		model.addAttribute("name",new ForgotUid());
+		return "forgotid";
+	}
+	@PostMapping("/forgotuid1")
+	public String fid1(@ModelAttribute("name") ForgotUid fid,Model model)
+	{
+		String b=adminservice.fid(fid);
+		if(b!=null)
+		{
+	  	model.addAttribute("message",b+" is your id");
+		}
+		else
+		{
+			model.addAttribute("message", "Incorrect credentials");
+		}
+		return "forgotid";
+	}
+	@GetMapping("/forgotpswd")
+	public String fpwd(Model model){
+		model.addAttribute("name1",new ForgotUid());
+		return "forgotpwd";
+	}
+	@PostMapping("/forgotpwd1")
+	public String fpwd1(@ModelAttribute("name1") ForgotUid fid,Model model)
+	{
+		boolean b=adminservice.fpwd(fid);
+		if(b==true)
+		{
+	  	  return "resetPwd";
+		}
+		else
+		{
+			model.addAttribute("message", "Incorrect credentials");
+			return "resetPwd";
+		}
+	}
+	@PostMapping("/updatepwd")
+	public String updatePassword(@ModelAttribute("name1") ForgotUid forgetUID,Model model)
+	{
+		Admin ad =dao.findByadminId(forgetUID.getUid());
+		ad.setPassword(forgetUID.getPwd());
+		dao.save(ad);
+		model.addAttribute("message","your password has been updated");
+		return "resetPwd";
+	}
 	@GetMapping(value="/adminlogout")
 	public String logout(HttpSession session) {
 		session.invalidate();

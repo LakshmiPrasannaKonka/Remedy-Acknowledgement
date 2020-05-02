@@ -9,7 +9,8 @@ import com.remedyack.remedyack.models.SupportAnalyst;
 
 @Repository
 public interface SupportAnalystdao extends CrudRepository<SupportAnalyst, String> {
-	public SupportAnalyst findByAnalystId(String analystId);
+	public SupportAnalyst findByanalystId(String analystId);
+	public SupportAnalyst findBycontactNumber(String contactNumber);
 
 }
 
