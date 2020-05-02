@@ -106,6 +106,40 @@ function validate(){
 
 
 </div>
+<<<<<<< HEAD
+=======
+<h2>Admin Login</h2>
+<div class="formdata">
+<div align="center">
+<form:form onsubmit="return validate()" action="loginverify" method="post" modelAttribute="adminlogin">
+<table>
+
+<tr>
+<td>UserId:</td>
+<td><form:input path="userId" class="formcontrol" id="userId"/></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><form:input path="password" class="formcontrol" id="password" type="password"/></td>
+</tr>
+</table>
+<input type="submit" value="submit" class="formsubmitbutton"/>
+</form:form>
+<ul>
+<div align="center">
+<li class="l"><a href="forgotuid">Forgot UserId</a></li>
+<li class="l"><a href="forgotpswd">Forgot Password</a></li>
+
+
+
+</ul>
+New Admin?<a href="/">Registration</a>
+<br><br>
+<a href="/">Home</a>
+
+<br>
+${message}
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 </div>
 </div>
 <script src="validators.js"></script>

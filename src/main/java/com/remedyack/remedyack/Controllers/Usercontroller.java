@@ -12,7 +12,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.remedyack.remedyack.dao.Userdao;
+<<<<<<< HEAD
 import com.remedyack.remedyack.models.ForgotUid;
+=======
+import com.remedyack.remedyack.models.Admin;
+import com.remedyack.remedyack.models.ForgotUid;
+import com.remedyack.remedyack.models.SupportAnalyst;
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 import com.remedyack.remedyack.models.User;
 import com.remedyack.remedyack.models.UserLogin;
 import com.remedyack.remedyack.services.UserServices;
@@ -119,7 +125,10 @@ public class Usercontroller {
 			model.addAttribute("message","your password has been updated");
 			return "resetPwd2";
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	 }
 	@GetMapping(value="/userlogout")
 	public String logout(HttpSession session) {

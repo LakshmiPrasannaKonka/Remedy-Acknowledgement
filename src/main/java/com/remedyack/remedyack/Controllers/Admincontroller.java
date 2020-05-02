@@ -30,6 +30,10 @@ public class Admincontroller {
     private UserRemedydao urdao;
     @Autowired
     private AdminServices adminservice;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	@GetMapping(value="/admin")
 	 public String admin(Model model) {
 		 model.addAttribute("admin",new Admin());
@@ -193,13 +197,16 @@ public class Admincontroller {
 		dao.save(ad);
 		model.addAttribute("message","your password has been updated");
 		return "resetPwd";
+<<<<<<< HEAD
 	}
 	@GetMapping(value="/adminlogout")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
+=======
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	}
-	@GetMapping("/adminLogout")
+		@GetMapping("/adminLogout")
 	public String adminLogOut(HttpSession session)
 	{
 		session.invalidate();	

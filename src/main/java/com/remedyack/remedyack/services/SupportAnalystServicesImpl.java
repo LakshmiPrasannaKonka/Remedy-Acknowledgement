@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.remedyack.remedyack.dao.SupportAnalystdao;
+<<<<<<< HEAD
+=======
+import com.remedyack.remedyack.models.Admin;
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 import com.remedyack.remedyack.models.ForgotUid;
 import com.remedyack.remedyack.models.SupportAnalyst;
 import com.remedyack.remedyack.models.SupportAnalystLogin;
@@ -31,8 +35,13 @@ public class SupportAnalystServicesImpl implements SupportAnalystServices {
 
 	@Override
 	public int login(SupportAnalystLogin supportanalystlogin) {
+<<<<<<< HEAD
 		SupportAnalyst sa=dao.findByanalystId(supportanalystlogin.getUserId());
 		 if(sa==null)
+=======
+		SupportAnalyst sal=dao.findByanalystId(supportanalystlogin.getUserId());
+		 if(sal==null)
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 		 {
 		   return 1;
 		 }
@@ -42,7 +51,10 @@ public class SupportAnalystServicesImpl implements SupportAnalystServices {
 		 }
 
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	@Override
 	public String f1id(ForgotUid f1uid) {
 		SupportAnalyst sa=dao.findBycontactNumber(f1uid.getPhno());

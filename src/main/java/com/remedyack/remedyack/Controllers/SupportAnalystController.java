@@ -14,16 +14,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.remedyack.remedyack.dao.SupportAnalystdao;
 import com.remedyack.remedyack.dao.UserRemedydao;
+<<<<<<< HEAD
+=======
+import com.remedyack.remedyack.models.Admin;
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 import com.remedyack.remedyack.models.ForgotUid;
 import com.remedyack.remedyack.models.SupportAnalyst;
 import com.remedyack.remedyack.models.SupportAnalystLogin;
 import com.remedyack.remedyack.models.UserRemedy;
+<<<<<<< HEAD
+=======
+import com.remedyack.remedyack.services.AdminServices;
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 import com.remedyack.remedyack.services.SupportAnalystServices;
 
 @Controller
 public class SupportAnalystController {
 	@Autowired
 	private SupportAnalystdao dao;
+    @Autowired
+	private SupportAnalystServices supportanalystservice;	    
 	@Autowired
 	private UserRemedydao urdao;
 	 @Autowired
@@ -123,8 +133,11 @@ System.out.println(sa);
 		model.addAttribute("message","your password has been updated");
 		return "resetPwd1";
 	}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	@GetMapping("/supportanalystLogout")
 	public String supportanalystLogOut(HttpSession session)
 	{
@@ -132,6 +145,7 @@ System.out.println(sa);
 		
 		return "redirect:/";
 	}
+	
 	@GetMapping(value="/assignedtoanalyst")
 	public String remedyinfo(Model model) {
 		List<UserRemedy> list=(List<UserRemedy>) urdao.findAll();

@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.remedyack.remedyack.dao.Userdao;
 import com.remedyack.remedyack.models.ForgotUid;
+<<<<<<< HEAD
+=======
+import com.remedyack.remedyack.models.SupportAnalyst;
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 import com.remedyack.remedyack.models.User;
 import com.remedyack.remedyack.models.UserLogin;
 

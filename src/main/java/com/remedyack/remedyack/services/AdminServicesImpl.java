@@ -54,6 +54,10 @@ public class AdminServicesImpl implements AdminServices {
 		// TODO Auto-generated method stub
 		return null;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	@Override
 	public String fid(ForgotUid fuid) {
 		Admin a1=dao.findBycontactNumber(fuid.getPhno());
@@ -75,7 +79,10 @@ public class AdminServicesImpl implements AdminServices {
 		  }
 		  return null;
 		}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 	@Override
 	public boolean fpwd(ForgotUid fuid) {
 		Admin a1=dao.findByadminId(fuid.getUid());
@@ -95,7 +102,14 @@ public class AdminServicesImpl implements AdminServices {
 				}
 			}
 		  }
+<<<<<<< HEAD
 		 
 		  return false;
 		}
 }
+=======
+		  return false;
+		}
+
+}
+>>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
