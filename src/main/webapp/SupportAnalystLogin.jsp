@@ -4,35 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-=======
-
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
 <link rel="stylesheet" type="text/css" href="/style.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<script type="text/javascript">
-function validate(){
-	var id=document.getElementById("userId").value;
-	var pwd=document.getElementById("password").value;
-	if(id==""){
-		document.getElementById("userId").style.borderColor = "red";
-		alert("please update mandatory highlighted fields");
-		return false;
-		}else if(pwd==""){
-			document.getElementById("password").style.borderColor = "red";
-			alert("please update mandatory highlighted fields");
-				return false;
-			}
-}
-</script>
 
 
 </head>
 <body>
-<<<<<<< HEAD
 
 <div class="container-fluid">
 <div class="row mainheader">
@@ -59,36 +39,6 @@ function validate(){
   </div>
 </nav>
 
-=======
-<div style="text-align:center">
-<div class="header">
-
-<h1>SupportAnalystLogin</h1>
-<div class="formdata">
-<div align="center">
-<form:form onsubmit="return validate()" action="supportanalystverify" method="post" modelAttribute="supportanalystlogin">
-<table>
-<tr>
-<td>UserId:</td>
-<td><form:input path="userId" class="formcontrol" id="userId"/></td>
-</tr>
-<tr>
-<td>Password:</td>
-<td><form:input path="password" class="formcontrol" id="password" type="password"/></td>
-</tr>
-</table>
-<input type="submit" value="submit" class="formsubmitbutton"/>
-</form:form>
-<ul>
-<div align="center">
-<li><a href="Aforgotuid">Forgot Userid </a></li>
-<li><a href="Aforgotpswd">Forgot Password</a></li>
-</ul>
-New User?<a href="supportanalyst">Registration</a><br><br>
-<a href="/">Home</a>
-<br>
-${message}
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 </div>
 
 

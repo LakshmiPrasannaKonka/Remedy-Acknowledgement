@@ -39,7 +39,7 @@ public class Admin {
 	private String secretquestion3;
 	@Column
 	private String answer3;
-<<<<<<< HEAD
+
 	@Column
 	private String email;
 	
@@ -49,8 +49,7 @@ public class Admin {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-=======
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
+
 		public String getSecretquestion1() {
 		return secretquestion1;
 	}
@@ -135,11 +134,11 @@ public class Admin {
 				+ ", gender=" + gender + ", contactNumber=" + contactNumber + ", password=" + password
 				+ ", secretquestion1=" + secretquestion1 + ", answer1=" + answer1 + ", secretquestion2="
 				+ secretquestion2 + ", answer2=" + answer2 + ", secretquestion3=" + secretquestion3 + ", answer3="
-<<<<<<< HEAD
+
 				+ answer3 + ", email=" + email + "]";
-=======
-				+ answer3 + "]";
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
+
+	
+
 	}
 		
 }

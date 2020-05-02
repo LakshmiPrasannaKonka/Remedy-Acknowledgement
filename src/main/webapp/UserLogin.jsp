@@ -11,7 +11,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
 
 
 <div class="container-fluid">
@@ -86,42 +85,8 @@
 <li class="l"><a href="Uforgotuid">ForgotUserid</a></li>
 <li class="l"><a href="Uforgotpswd">Forgot Password</a></li>
   </div>
-=======
-<div class="header">
- <div style="text-align:center">
-</div>
-<h1>User Login</h1>
-<div class="formdata">
-
-<div align="center">
-<form:form onsubmit="return validate()" action="userloginverify" method="post" modelAttribute="userlogin">
- <table align="center">
-
-<tr>
-<td>UserId:</td>
-<td><form:input path="userId" class="formcontrol" id="userId"/></td>
-</tr>
-<tr>
-<td>Password:</td>
-<td><form:input path="password" class="formcontrol" id="password" type="password"/></td>
-</tr>
-</table>
-<input type="submit" value="submit" class="formsubmitbutton"/>
-</form:form>
-<ul>
-<div align="center">
-<li class="l"><a href="Uforgotuid">ForgotUserid</a></li>
-<li class="l"><a href="Uforgotpswd">Forgot Password</a></li>
-</ul>
-New User?<a href="user">Registration</a><br><br>
-<a href="/">Home</a>
-<br>
-${message}
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
 </div>
 </div>
-
-
 </div>
 </div>
 </div>

@@ -41,7 +41,7 @@ public class SupportAnalyst {
 	private String secretquestion3;
 	@Column
 	private String answer3;
-<<<<<<< HEAD
+
 	@Column
 	private String email;
 	
@@ -51,8 +51,7 @@ public class SupportAnalyst {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-=======
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
+
 		public String getSecretquestion1() {
 		return secretquestion1;
 	}
@@ -149,16 +148,12 @@ public class SupportAnalyst {
 	public String toString() {
 		return "SupportAnalyst [analystId=" + analystId + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", age=" + age + ", gender=" + gender + ", contactNumber=" + contactNumber + ", supportLevel="
-<<<<<<< HEAD
+
 				+ supportLevel + ", password=" + password + ", status=" + status + ", secretquestion1="
 				+ secretquestion1 + ", answer1=" + answer1 + ", secretquestion2=" + secretquestion2 + ", answer2="
 				+ answer2 + ", secretquestion3=" + secretquestion3 + ", answer3=" + answer3 + ", email=" + email + "]";
-=======
-				+ supportLevel + ", password=" + password + ", status=" + status
-				+ ", secretquestion1=" + secretquestion1 + ", answer1=" + answer1 + ", secretquestion2="
-				+ secretquestion2 + ", answer2=" + answer2 + ", secretquestion3=" + secretquestion3 + ", answer3="
-				+ answer3 + "]";
->>>>>>> e1b5ce3d439e4ef94f9b0d405cf528095647417a
+
+				
 	}
 	
 			
